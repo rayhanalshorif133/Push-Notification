@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     public function sendNotification(Request $request)
     {
-        $firebaseToken = User::whereNull('device_token')->pluck('device_token')->all();
+        $firebaseToken = User::whereNotNull('device_token')->pluck('device_token')->all();
 
         // BGZi9ZItMkplJvrPRqdYwEF2J1p2PmbsT8BaMsgHW_-PAE6xWm4SVSfTiZyCSrzwX_sQlBNg8AjsB2nsXQcbdzo
 
@@ -53,6 +53,8 @@ class HomeController extends Controller
             "notification" => [
                 "title" => $request->title,
                 "body" => $request->body,
+                "content_available" => true,
+                "priority" => "high",
             ]
         ];
         $dataString = json_encode($data);
@@ -73,6 +75,6 @@ class HomeController extends Controller
 
         $response = curl_exec($ch);
 
-        return response()->json(['success' => 'Notification sent successfully.']);
+        return redirect()->back()->with('success', 'Notification sent successfully.');
     }
 }

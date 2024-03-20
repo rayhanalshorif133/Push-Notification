@@ -41,13 +41,13 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script>
     var firebaseConfig = {
-        apiKey: "AIzaSyAOs5Zl5ucKK1HezLCpdBqgZiAKvqAE2As",
-        authDomain: "push-notification-fa6af.firebaseapp.com",
-        projectId: "push-notification-fa6af",
-        storageBucket: "push-notification-fa6af.appspot.com",
-        messagingSenderId: "828118251131",
-        appId: "1:828118251131:web:24164e9b28dd7b641fd4de",
-        measurementId: "G-VQ72X5K5ZQ"
+        apiKey: "AIzaSyCkAepUm6AgMLMGKR7Ad9ILf-cbDBJQ9KA",
+        authDomain: "push-notifications-9c6b3.firebaseapp.com",
+        projectId: "push-notifications-9c6b3",
+        storageBucket: "push-notifications-9c6b3.appspot.com",
+        messagingSenderId: "270243300047",
+        appId: "1:270243300047:web:d773b380f977e146452dba",
+        measurementId: "G-SSVX16STS2"
     };
 
     firebase.initializeApp(firebaseConfig);
